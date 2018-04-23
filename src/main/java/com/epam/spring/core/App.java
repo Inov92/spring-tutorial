@@ -5,10 +5,12 @@ import com.epam.spring.core.enums.EventType;
 import com.epam.spring.core.events.Event;
 import com.epam.spring.core.loggers.ConsoleEventLogger;
 import com.epam.spring.core.loggers.IEventLogger;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Map;
 
 public class App {
+    @Autowired
     private Client client;
     private IEventLogger defaultLogger;
     private Event event;
