@@ -12,13 +12,14 @@ public class MainApplication {
         App app = (App) ctx.getBean("app");
         for (int i = 0; i < 5; i++) {
             Event event = (Event) ctx.getBean("event");
-            app.logEvent(EventType.ERROR, event);
+            app.logEvent(EventType.INFO, event);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+        app.showStatistics();
         ctx.close();
     }
 }
